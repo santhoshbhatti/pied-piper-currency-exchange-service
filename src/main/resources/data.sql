@@ -1,0 +1,6 @@
+insert into CURRENCY_EXCHANGE_ENTITY values (1,80.0,'','USD','INR') 
+insert into CURRENCY_EXCHANGE_ENTITY values (2,40.0,'','AUD','INR') 
+insert into CURRENCY_EXCHANGE_ENTITY values (3,100.0,'','EUR','INR') 
+insert into CURRENCY_EXCHANGE_ENTITY values (4,8.0,'','SUD','INR') 
+insert into CURRENCY_EXCHANGE_ENTITY values (5,25.0,'','SPD','INR') 
+insert into CURRENCY_EXCHANGE_ENTITY values (6,90.0,'','GBP','INR') 
