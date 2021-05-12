@@ -1,5 +1,7 @@
 package com.pp.ce.controllers;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,10 +26,12 @@ public class CurrencyExchangeController {
 	@Autowired
 	CurrencyExchangeRepo currencyExchangeRepo;
 	
+	Logger logger=LoggerFactory.getLogger(this.getClass());
+	
 	@GetMapping("/currency-exchange/from/{from}/to/{to}")
 	public CurrencyExchange retriveExchangeValue(@PathVariable("from") String from,
 			@PathVariable("to") String to) {
-		
+		logger.info("currency-exchange request to convert {} from {}",to,from);
 		CurrencyExchangeEntity ce=currencyExchangeRepo.findByFromAndTo(from, to);
 		if(ce == null) {
 			throw new CurrencyExchangeNotFoundException("no exchange data found");
